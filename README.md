@@ -1,5 +1,6 @@
 
 ===============================
+
 This sample project contains the scripts that are required to build the weblogic domain image from base weblogic binaries.
 Dockerfile in this project extends the Oracle WebLogic Server image by creating a sample WLS 12.2.1.3 domain and cluster. Utility scripts are copied into the image, enabling users to plug Node Manager automatically into the Administration Server running on another container.
 
