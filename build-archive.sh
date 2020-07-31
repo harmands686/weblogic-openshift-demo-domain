@@ -25,6 +25,6 @@ fi
 
 rm -Rf ${scriptDir}/archive
 mkdir -p ${scriptDir}/archive/wlsdeploy/applications
-cd demo-webapp && mvn clean install && cd ..
+cd demo-webapp && /c/Users/HarmandeepSingh/Softwares/apache-maven-3.6.3/bin/mvn clean install && cd ..
 cp demo-webapp/target/demowebapp.war ${scriptDir}/archive/wlsdeploy/applications/demowebapp.war
 ${JAVA_HOME}/bin/jar cvf ${scriptDir}/archive.zip  -C ${scriptDir}/archive wlsdeploy

@@ -18,5 +18,5 @@ docker build \
     --build-arg WDT_VARIABLE=properties/docker-build/domain.properties \
     --build-arg WDT_ARCHIVE=archive.zip \
     --force-rm=true \
-    -t demo-webapp:2.0 .
+    -t demo-webapp:1.0 .
 

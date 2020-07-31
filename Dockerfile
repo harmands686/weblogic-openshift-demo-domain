@@ -27,7 +27,7 @@
 #            --build-arg CUSTOM_ADMIN_PORT=7001 \
 #            --build-arg CUSTOM_ADMIN_NAME=7001 \
 #            --build-arg CUSTOM_MANAGED_SERVER_PORT=8001 \
-#            --build-arg CUSTOM_DOMAIN_NAME=to2f_domain \
+#            --build-arg CUSTOM_DOMAIN_NAME=demo_domain \
 #            --build-arg CUSTOM_DEBUG_PORT=8453 \
 #            --build-arg WDT_MODEL=simple-topology.yaml \
 #            --build-arg WDT_ARCHIVE=archive.zip \
@@ -59,7 +59,7 @@ ARG CUSTOM_ADMIN_NAME=AdminServer
 ARG CUSTOM_ADMIN_HOST=wlsadmin
 ARG CUSTOM_ADMIN_PORT=7001
 ARG CUSTOM_MANAGED_SERVER_PORT=8001
-ARG CUSTOM_DOMAIN_NAME=to2f_domain
+ARG CUSTOM_DOMAIN_NAME=base_domain
 ARG CUSTOM_DEBUG_PORT=8453
 
 # Persist arguments - for ports to expose and container to use
@@ -86,7 +86,6 @@ ENV DOMAIN_HOME=${DOMAIN_PARENT}/${DOMAIN_NAME} \
 
 COPY weblogic-deploy.zip ${WDT_HOME}
 COPY container-scripts/* ${SCRIPT_HOME}/
-COPY scalingAction.sh ${DOMAIN_HOME}
 # Create the properties file directory and the domain home parent with the correct permissions / owner. 
 # Unzip and install the WDT image and change the permissions / owner.
 USER root
